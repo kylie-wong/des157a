@@ -1,0 +1,41 @@
+body {
+    font-family: "Urbanist", serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5;
+    list-style-type: none;
+    cursor:pointer
+}
+
+header{
+    background:url(images/filmheader.png);
+    height:250px;
+    width:1100px;
+    text-align: right;
+    justify-content: center;
+}
+
+article ul {
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+main {
+    display: flex;
+}
+
+article {
+    border: 1px solid #ccc;
+    color: black;
+    padding: 20px;
+    margin: 10px;
+    background-color: #dfdfdf;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 4px black;
+    flex: 4;
+    max-width: 20%;
+}
