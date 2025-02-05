@@ -1,0 +1,33 @@
+body {
+    font-family: "Urbanist", serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5;
+}
+body label{
+    font-family: "Urbanist", serif;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.5;
+}
+
+h1 {
+    font-family: "Urbanist", serif;
+    font-weight: 900;
+}
+
+input, label {
+    display: block;
+}
+
+input {
+    margin-bottom: 20px;
+}
+
+fieldset label, fieldset input {
+    display: inline;
+}
+
+fieldset label {
+    margin-bottom: 20px;
+}

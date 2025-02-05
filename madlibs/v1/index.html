@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MadLibs V1</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    
+    <!-- google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <!--my styles-->
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Road Trip!</h1>
+    <main>
+        <form action="processor.php" method="POST">
+
+            <label for="adj">Adjective</label>
+            <input type="text" id="adj" required="required">
+
+            <label for="person1">Name</label>
+            <input type="text" id="person1" required="required">
+
+            <label for="person2">Name 2</label>
+            <input type="text" id="person2" required="required">
+
+            <label for="vehicle">vehicle</label>
+            <input type="text" id="vehicle" required="required">
+
+            <label for="noun1">Noun</label>
+            <input type="text" id="noun1" required="required">
+
+            <label for="verb">Verb</label>
+            <input type="text" id="verb" required="required">
+
+            <label for="restaurant">restaurant</label>
+            <input type="text" id="restaurant" required="required">
+
+            <label for="food">Food</label>
+            <input type="text" id="food" required="required">
+
+            <label for="sound">Sound</label>
+            <input type="text" id="sound" required="required">
+
+            <label for="animal">Animal</label>
+            <input type="text" id="animal" required="required">
+
+            <label for="sound2">Sound</label>
+            <input type="text" id="sound2" required="required">
+
+            <fieldset>
+                <input type="radio" id="mountain-lava" value="Lava">
+                <label for="mountain-lava">lava</label>
+
+                <input type="radio" id="mountain-snow" value="Snowy" checked>
+                <label for="mountain-snow">snowy</label>
+            </fieldset>
+
+            <label for="noun2">Noun</label>
+            <input type="text" id="noun2" required="required">
+
+            <label for="place">Place</label>
+            <input type="text" id="place" required="required">
+
+
+            <input type="submit" id="send-form" value="Done!">
+        </form>
+</main>
+</body>
+</html>
