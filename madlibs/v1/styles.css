@@ -4,11 +4,16 @@ body {
     font-style: normal;
     line-height: 1.5;
 }
+
 body label{
     font-family: "Urbanist", serif;
     font-weight: 700;
     font-style: normal;
     line-height: 1.5;
+}
+
+form {
+    
 }
 
 h1 {
