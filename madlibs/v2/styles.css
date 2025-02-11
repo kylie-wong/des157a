@@ -1,0 +1,133 @@
+* { box-sizing: border-box; }
+
+/* don't reset margins and padding on form elements */
+h1, h2, h3, p, nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul { list-style-type: none; }
+
+a { text-decoration: none; }
+
+img { 
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* end css reset */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+    font-family: "Urbanist", serif;
+    font-size: 2em;
+    background-color: #333;
+    color: rgb(80, 144, 90);
+}
+
+main {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    min-width: 975px;
+    max-height: 750px;
+    background-color: rgb(144, 186, 223);
+    text-align: center;
+}
+
+main section {
+    display: block;
+    flex-direction: column;
+    padding: 20px;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+}
+
+main h1 {
+    font-size: 2em;
+    text-shadow: 1px 1px 0px white, -1px -1px 0px white, 1px -1px 0px white, -1px 1px 0px white;
+    text-align: left;
+}
+
+main h2 {
+    font-size: 1.2em;
+}
+
+/* main section:nth-child(2){
+    gap: 40px;
+} */
+
+form {
+    margin: 15px;
+    font-size: .7em;
+    width: 500px;
+}
+
+input[type="text"] {
+    background-color: transparent;
+    padding: 12px;
+    border: 2px solid rgb(0, 0, 0);;
+    border-radius: 15px;
+    font-size: .5em;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    margin-bottom: 10px;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border: 5px solid rgb(125, 192, 115);
+    background-color: transparent;
+}
+
+input::placeholder {
+    font-weight: normal;
+    font-style: italic;
+    color: rgb(214, 208, 208);
+}
+
+input[type="submit"] {
+    margin: 20px auto 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 0.9em;
+    border: 0;
+    background-color: rgb(101, 177, 194);
+    color: white;
+    cursor: pointer;
+}
+
+#madlib {
+    padding: 40px;
+    text-align: left;
+}
+
+#madlib p span {
+    font-weight: bold;
+    color: rgb(80, 205, 103);
+}
+
+.white {
+    background-color: rgb(255, 255, 255);
+    /* right side background */
+}
+
+.background {
+    background-image: url('snow.png');
+    /* left side background */
+}
+
+.hidden {
+    display: none;
+}
+
+.showing {
+    display: flex;
+}
