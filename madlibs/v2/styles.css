@@ -99,7 +99,7 @@ input[type="submit"] {
     border-radius: 10px;
     font-size: 0.9em;
     border: 0;
-    background-color: rgb(101, 177, 194);
+    background-color: rgb(255, 255, 255);
     color: white;
     cursor: pointer;
 }
@@ -120,7 +120,7 @@ input[type="submit"] {
 }
 
 .background {
-    background-image: url('snow.png');
+    background-image: url('images/snow.png');
     /* left side background */
 }
 
