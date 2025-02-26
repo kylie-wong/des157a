@@ -1,6 +1,6 @@
 body {
     font-family: Arial;
-    color: #666;
+    color: #161515;
     text-align: center;
 }
 
@@ -21,7 +21,7 @@ body {
 #container img {
     display: block;
     position: absolute;
-    transition: all 3s ease;
+    transition: all 2s ease;
 }
 
 #topleft {
@@ -71,7 +71,8 @@ body {
 
 .topright {
     top: 0;
-    left: -2968px;
+    /* left: -2968px; */
+    left: -2000;
 }
 
 .bottomleft {
