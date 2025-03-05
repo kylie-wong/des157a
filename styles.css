@@ -19,7 +19,12 @@ article ul {
     list-style-type: none;
 }
 
-a{
+article ul li a:hover {
+    color: #db2929; 
+    transition: color 0.3s ease-in-out;
+}
+
+a {
     text-decoration: none;
     color: black;
 }

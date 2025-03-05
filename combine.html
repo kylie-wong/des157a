@@ -12,9 +12,56 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     
-    <!--my styles-->
-    <link href="styles.css" rel="stylesheet">
+<style>
+        body {
+        font-family: "Urbanist", serif;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 1.5;
+        list-style-type: none;
+        cursor:pointer
+    }
+
+    header{
+        background:url(images/filmheader.png);
+        height:250px;
+        width:1100px;
+        text-align: right;
+        justify-content: center;
+    }
+
+    article ul {
+        list-style-type: none;
+    }
+
+    article ul li a:hover {
+    color: #db2929; 
+    transition: color 0.3s ease-in-out;
+    }
+
+    a{
+        text-decoration: none;
+        color: black;
+    }
+
+    main {
+        display: flex;
+    }
+
+    article {
+        border: 1px solid #ccc;
+        color: black;
+        padding: 20px;
+        margin: 10px;
+        background-color: #dfdfdf;
+        box-sizing: border-box;
+        box-shadow: 2px 2px 4px black;
+        flex: 4;
+        max-width: 20%;
+    }
+</style>
 </head>
+
 <body>
     <header>
         <h1>Kylie Wong's Portal Page</h1>
@@ -53,7 +100,7 @@
         <article>
             <h2>Game On</h2>
             <ul>
-                <li><a href="game/designv1.html">Design Version 1</a></li>
+                <li><a href="#">Design Version 1</a></li>
                 <li><a href="#">Design Version 2</a></li>
                 <li><a href="#">Code Version 1</a></li>
                 <li><a href="#">Final Game On Project</a></li>
