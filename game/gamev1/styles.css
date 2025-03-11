@@ -27,7 +27,6 @@ button:hover {
 .container {
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
     max-width: 90%;
     margin: 50px auto;
 }
@@ -36,7 +35,7 @@ button:hover {
     width: 50%;
 }
 
-.table {
+/* .table {
     width: 400px;
     height: 600px;
     background-color: #72B58C;
@@ -44,4 +43,39 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+} */
+
+.table {
+    width: 400px;
+    height: 600px;
+    background-color: #72B58C;
+    border: 25px solid #382B17; 
+    position: relative;
 }
+
+.ball {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.cue-ball {
+    background-color: white;
+    border: 2px solid black;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.red 
+{ background-color: red; }
+.yellow 
+{ background-color: yellow; }
+.blue 
+{ background-color: blue; }
+
+
+.ball.red { top: 50px; left: 50%; transform: translateX(-50%); } /* mid */
+.ball.yellow { top: 30px; left: 35%; } /* L */
+.ball.blue { top: 30px; left: 65%; } /* R */
