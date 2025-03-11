@@ -1,0 +1,33 @@
+body {
+    font-family: "Urbanist", serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5;
+    list-style-type: none;
+    cursor: pointer;
+    background-color: rgb(206, 254, 254);
+}
+
+button { 
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: rgb(57, 109, 82);
+    color: white;
+
+}
+
+.table {
+    width: 400px;
+    height: 600px;
+    background-color: #72B58C;
+    border: 25px solid #382B17; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
