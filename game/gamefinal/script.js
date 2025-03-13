@@ -83,7 +83,7 @@
     });
 
     // display who first player's is
-    const playTurnBtn = document.querySelector 
+    // const playTurnBtn = document.querySelector('#playturn');
     const playTurnSound = new Audio('sounds/billiard-sound.mp3');
 
     function setUpTurn() {
@@ -94,7 +94,7 @@
         document.querySelector("#playturn").addEventListener("click", function () {
             playTurnSound.currentTime = 0; 
             playTurnSound.play();
-            playTurn();  
+            playTurn();
         });
     }
 
