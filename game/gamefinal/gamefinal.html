@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Game On: Pool</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <!-- google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link href="styles.css" rel="stylesheet">
+
+    <script src="script.js" defer></script>
+
+</head>
+
+<body>
+    <h1>Let's play pool!</h1>
+
+    <main class="container">
+        <!-- left side-->
+        <section class="left">
+            <div class="text">
+                <h2>How to play</h2> 
+                <p id="instructions">
+                    There are two players, and the first player will be randomly selected once the game begins. 
+                    The player whose turn it is clicks the white cue ball and hits a colored ball to score points. 
+                    Each color ball has a different score. If a player scores a 1, their turn ends. 
+                    The first player to reach 20 points wins.
+                </p>
+
+                <div id="gamecontrol">
+                    <button id="startgame">Select First Player</button>
+                    <button id="quit" style="display: none;">Start a new game?</button>
+                </div>
+
+                <div id="game">
+                    <div id="score">
+                        <p><strong>Player 1:</strong> <span id="player1-score">0</span></p>
+                        <p><strong>Player 2:</strong> <span id="player2-score">0</span></p>
+                        <p><strong>Turn:</strong> <span id="current-player">Select player...</span></p>
+                    </div>
+                    
+                    <div id="game-message"></div>
+                    <div id="actions"></div> 
+                </div>
+            </div>
+        </section>
+
+        <!-- right side-->
+        <div class="table">
+            <div class="cue-ball"></div>
+
+            <div class="ball-container red">
+                <div class="ball red"></div>
+                <div class="ball-number">1</div>
+            </div>
+            <div class="ball-container yellow">
+                <div class="ball yellow"></div>
+                <div class="ball-number">2</div>
+            </div>
+            <div class="ball-container blue">
+                <div class="ball blue"></div>
+                <div class="ball-number">3</div>
+            </div>
+            <div class="ball-container green">
+                <div class="ball green"></div>
+                <div class="ball-number">4</div>
+            </div>
+            <div class="ball-container purple">
+                <div class="ball purple"></div>
+                <div class="ball-number">5</div>
+            </div>
+            <div class="ball-container orange">
+                <div class="ball orange"></div>
+                <div class="ball-number">6</div>
+            </div>
+        </div>
+    </main>
+
+    <button class="valid">
+        <li><a href="images/html-valid-gamev2.png">HTML Valid</a></li>
+    </button>
+    
+    <button class="valid">
+        <li><a href="images/css-valid-gamev2.png">CSS Valid</a></li>
+    </button>
+
+</body>
+</html>

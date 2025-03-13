@@ -21,8 +21,18 @@ button {
 
 button:hover {
     background-color: rgb(247, 130, 212);
-
 }
+
+.valid {
+    background-color: rgb(206, 254, 254);
+    color: blue;
+    border: none;
+}
+
+.valid:hover {
+    color: black;
+    border: none;
+} 
 
 .container {
     display: flex;
@@ -47,6 +57,7 @@ button:hover {
 
 .table {
     width: 400px;
+    min-width: 400px;
     height: 600px;
     background-color: #72B58C;
     border: 25px solid #382B17; 
@@ -62,18 +73,17 @@ button:hover {
 
 .cue-ball {
     background-color: white;
-    border: 2px solid black;
-    bottom: 30px;
+    bottom: 30px; 
     left: 50%;
     transform: translateX(-50%);
 }
 
 .red 
-{ background-color: red; }
+{ background-color: red;}
 .yellow 
-{ background-color: yellow; }
+{ background-color: yellow;}
 .blue 
-{ background-color: blue; }
+{ background-color: blue;}
 
 
 .ball.red { top: 50px; left: 50%; transform: translateX(-50%); } /* mid */

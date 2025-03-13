@@ -3,27 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game On V1</title>
+    <title>Game V1</title>
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
 
-    <!-- google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-     <!--my styles-->
      <link href="styles.css" rel="stylesheet">
-
 </head>
 
 <body>
     <h1>Let's play pool!</h1>
 
-    <div class = "container">
-        <div class = "text">
+    <div class="container">
+        <!-- make the split screen sections instead of divs-->
+        <div class="text">
             <h2>How to play</h2>
-            <p id = "instructions">There are two players. The player whose turn it is clicks the white cue ball and hits a colored ball to score points. Each color ball has a different score, player can continue hitting the ball unless the player scores a 1, it moves to the other player's turn. The first player to reach 20 points wins.</p>
+            <p id="instructions">There are two players. The player whose turn it is clicks the white cue ball and hits a colored ball to score points. Each color ball has a different score, player can continue hitting the ball unless the player scores a 1, it moves to the other player's turn. The first player to reach 20 points wins.</p>
 
             <div id="gamecontrol">
                 <h2>Start Game</h2>
@@ -44,6 +42,14 @@
     <div id="game"></div>
     <div id="actions"></div>
     <div id="score"></div>
+
+    <button class="valid">
+        <li><a href="validation/game-html-valid.png">HTML Valid</a></li>
+    </button>
+    
+    <button class="valid">
+        <li><a href="validation/game-css-valid.png">CSS Valid</a></li>
+    </button>
 
 </body>
 </html>

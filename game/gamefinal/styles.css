@@ -1,0 +1,195 @@
+body {
+    font-family: "Urbanist", serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5;
+    background-color: rgb(206, 254, 254);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* center title */
+    align-items: center;
+}
+
+h1 {
+    margin-left: 25px;
+    text-align: center;
+}
+
+/* layout for split screen */
+.container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start; /* to top */
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+/* left section for text and buttons */
+.left {
+    flex: 1;
+    max-width: 500px;
+    padding: 20px;
+}
+
+button { 
+    padding: 10px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(247, 130, 212);
+}
+
+.valid {
+    background-color: rgb(206, 254, 254);
+    list-style-type: none;
+    color: blue;
+    border: none;
+}
+
+.valid:hover {
+    color: black;
+    border: none;
+} 
+
+#gamecontrol {
+    margin-top: 20px;
+}
+
+#gamecontrol button {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#score {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+#game-message {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* right side for table, keep size of table fixed */
+.table {
+    font-family: "Urbanist", sans-serif;
+    width: 400px; 
+    height: 600px; 
+    background-color: #72B58C;
+    border: 25px solid #382B17;
+    border-radius: 20px;
+    position: relative;
+    margin-left: auto; 
+    flex-shrink: 0; 
+}
+
+.cue-ball {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid black;
+    position: absolute;
+    top: 630px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: transform 0.5s ease-out;
+}
+
+.ball-container {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+
+/* colored baalls */
+.ball {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 2; /* ball over  the number */
+}
+
+/* ball colors */
+.ball.red { background-color: red; }
+.ball.yellow { background-color: yellow; }
+.ball.blue { background-color: blue; }
+.ball.green { background-color: greenyellow; }
+.ball.purple { background-color: purple; }
+.ball.orange { background-color: orange; }
+
+/* numbers under the balls */
+.ball-number {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 1; /* keep it lowere than colored balls to hide it under */
+}
+
+/* turn opacity down so num gets revealed */
+.ball.faded {
+    opacity: 0.2;
+}
+
+/* ball positioss on table */
+.ball-container.red { top: 60px; left: 50%; transform: translateX(-50%); }
+.ball-container.yellow { top: 40px; left: 33%; }
+.ball-container.blue { top: 40px; left: 67%; }
+.ball-container.green { top: 160px; left: 30%; }
+.ball-container.purple { top: 150px; left: 50%; transform: translateX(-50%); }
+.ball-container.orange { top: 160px; left: 70%; }
+
+/* ball animations for cue ball moving to colored balls */
+@keyframes moveToYellow { 
+    from { top: 630px; left: 50%; } 
+    to { top: 55px; left: 36%; } 
+}
+
+@keyframes moveToRed { 
+    from { top: 630px; left: 50%; } 
+    to { top: 75px; left: 50%; transform: translateX(-50%); } 
+}
+
+@keyframes moveToBlue { 
+    from { top: 630px; left: 50%; } 
+    to { top: 55px; left: 64%; } 
+}
+
+@keyframes moveToGreen { 
+    from { top: 630px; left: 50%; } 
+    to { top: 175px; left: 30%; } 
+}
+
+@keyframes moveToPurple { 
+    from { top: 630px; left: 50%; } 
+    to { top: 165px; left: 50%; transform: translateX(-50%); } 
+}
+
+@keyframes moveToOrange { 
+    from { top: 630px; left: 50%; } 
+    to { top: 175px; left: 70%; } 
+}
+
+/* animation styles to be assigned in js */
+.move-yellow { animation: moveToYellow 0.5s ease-out forwards; }
+.move-red { animation: moveToRed 0.5s ease-out forwards; }
+.move-blue { animation: moveToBlue 0.5s ease-out forwards; }
+.move-green { animation: moveToGreen 0.5s ease-out forwards; }
+.move-purple { animation: moveToPurple 0.5s ease-out forwards; }
+.move-orange { animation: moveToOrange 0.5s ease-out forwards; }
