@@ -94,8 +94,8 @@
         document.querySelector("#playturn").addEventListener("click", function () {
             playTurnSound.currentTime = 0; 
             playTurnSound.play();
-            playTurn(); 
-        }); 
+            playTurn();  
+        });
     }
 
 
@@ -109,7 +109,7 @@
         const points = ballValues[color];
     
         // remove previous animations
-        cueBall.classList.remove(...Object.values(ballMap));
+        cueBall.classList.remove(...Object.values(ballMap)); // retrieve array ballMap animations and remove it
     
         // moving cue ball
         cueBall.classList.add(moveClass);
@@ -126,7 +126,7 @@
     
             // if game isn't over (20pts reached) switch player
             if (gameData.score[gameData.index] < gameData.gameEnd) {
-                gameData.index = gameData.index === 0 ? 1 : 0;
+                gameData.index = gameData.index === 0 ? 1 : 0; // check if gameData.Index is 0, if it is switch to player 1, if not do not switch
                 setTimeout(setUpTurn, 500); // Delay to set up next turn
             }
     
@@ -141,3 +141,5 @@
     
     showCurrentScore();
 })();
+
+
