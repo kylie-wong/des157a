@@ -1,18 +1,18 @@
 (function () {
-    const startGame = document.querySelector("#startgame");
-    const gameControl = document.querySelector("#gamecontrol");
+    const startGame = document.querySelector('#startgame');
+    const gameControl = document.querySelector('#gamecontrol');
     // const game = document.querySelector("#game");
-    const score = document.querySelector("#score");
-    const actionArea = document.querySelector("#actions");
-    const cueBall = document.querySelector(".cue-ball");
-    const ballContainers = document.querySelectorAll(".ball-container");
-    const gameMessage = document.querySelector("#game-message");
+    const score = document.querySelector('#score');
+    const actionArea = document.querySelector('#actions');
+    const cueBall = document.querySelector('.cue-ball');
+    const ballContainers = document.querySelectorAll('.ball-container');
+    const gameMessage = document.querySelector('#game-message');
 
     // disable cue ball clicks until a player is selected
-    cueBall.classList.add("disabled");
+    cueBall.classList.add('disabled');
 
     const gameData = {
-        players: ["Player 1", "Player 2"],
+        players: ['Player 1', 'Player 2'],
         score: [0, 0],
         gameEnd: 20
     };
@@ -29,12 +29,12 @@
 
     // connect color balls to css animations
     const ballMap = {
-        red: "move-red",
-        yellow: "move-yellow",
-        blue: "move-blue",
-        green: "move-green",
-        purple: "move-purple",
-        orange: "move-orange"
+        red: 'move-red',
+        yellow: 'move-yellow',
+        blue: 'move-blue',
+        green: 'move-green',
+        purple: 'move-purple',
+        orange: 'move-orange'
     };
 
     // score tracking
@@ -50,10 +50,10 @@
             // show winner
             gameMessage.innerHTML = `<h2>${gameData.players[gameData.index]} wins with ${gameData.score[gameData.index]} points!</h2>`;
             actionArea.innerHTML = ''; // remove startbutton after starting game
-            gameControl.innerHTML += '<button id="quit">Start a new game?</button>'; 
+            gameControl.innerHTML += '<button id="newgame">Start a new game?</button>'; 
 
-            document.querySelector("#quit").addEventListener("click", function () {
-                location.reload();
+            document.querySelector('#newgame').addEventListener('click', function () {
+                location.reload(); // reload to initial page
             });
         } else {
             // change scoreboard (only if no one has reached 20)
@@ -68,10 +68,10 @@
         gameData.index = Math.round(Math.random());
         console.log(`First player is: ${gameData.players[gameData.index]}`);
 
-        gameControl.innerHTML = "<h2>The Game Has Started</h2>";
+        gameControl.innerHTML = '<h2>The Game Has Started</h2>';
         gameControl.innerHTML += '<button id="quit">Wanna quit?</button>';
 
-        document.querySelector("#quit").addEventListener("click", function () {
+        document.querySelector('#quit').addEventListener('click', function () {
             location.reload();
         });
 
@@ -79,7 +79,7 @@
         setUpTurn();
 
         // enable cue ball clicking
-        cueBall.classList.remove("disabled");
+        // cueBall.classList.remove('disabled');
     });
 
     // display who first player's is
@@ -91,19 +91,18 @@
         actionArea.innerHTML = '<button id="playturn">Take the Shot</button>';
 
         // play sound on clickk
-        document.querySelector("#playturn").addEventListener("click", function () {
+        document.querySelector('#playturn').addEventListener('click', function () {
             playTurnSound.currentTime = 0; 
             playTurnSound.play();
             playTurn();
         });
     }
 
-
     // playing a turn by clicking cue ball
     function playTurn() {
         // select a random ball container
         const randomBallContainer = ballContainers[Math.floor(Math.random() * ballContainers.length)];
-        const ball = randomBallContainer.querySelector(".ball"); // what colored ball?
+        const ball = randomBallContainer.querySelector('.ball'); // what colored ball?
         const color = ball.classList[1]; //get color style from css class list
         const moveClass = ballMap[color]; // get the animation css class list
         const points = ballValues[color];
@@ -117,8 +116,8 @@
         // wait for cueballl movement animation to finish before fading the ball
         setTimeout(function () {
             // fade the ball to reveal number
-            ball.setAttribute("data-faded", "true");
-            ball.classList.add("faded");
+            ball.setAttribute('data-faded', 'true');
+            ball.classList.add('faded');
             
             gameData.score[gameData.index] += points; // adjust score for current player
     
@@ -127,13 +126,14 @@
             // if game isn't over (20pts reached) switch player
             if (gameData.score[gameData.index] < gameData.gameEnd) {
                 gameData.index = gameData.index === 0 ? 1 : 0; // check if gameData.Index is 0, if it is switch to player 1, if not do not switch
+                
                 setTimeout(setUpTurn, 500); // Delay to set up next turn
             }
     
             // restore original ball and cue ball pos, style after 1 second
             setTimeout(function () {
-                ball.removeAttribute("data-faded"); // fade style for number
-                ball.classList.remove("faded"); //fade style for ball
+                ball.removeAttribute('data-faded'); // fade style for number
+                ball.classList.remove('faded'); //fade style for ball
                 cueBall.classList.remove(moveClass); // cue ball position
             }, 1000);
         }, 500); 

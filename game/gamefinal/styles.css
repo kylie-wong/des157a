@@ -7,13 +7,15 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column; /* center title */
+    flex-direction: column; 
+    /* center title */
     align-items: center;
 }
 
 h1 {
     margin-left: 25px;
-    text-align: center;
+    /* text-align: center; */
+    font-size: 900;
 }
 
 /* layout for split screen */
